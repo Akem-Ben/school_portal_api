@@ -8,7 +8,6 @@ const {
     DATABASE_HOST,
     DATABASE_USERNAME,
     DATABSE_PASSWORD,
-    DATABASE_PORT
 } = process.env
 
 export const database = new Sequelize(
@@ -17,7 +16,6 @@ export const database = new Sequelize(
     DATABSE_PASSWORD as string,
   {
     host: DATABASE_HOST,
-    // port: DATABASE_PORT as unknown as number,
     dialect: "postgres",
     logging: false,
     dialectOptions: {
