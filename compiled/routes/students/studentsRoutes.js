@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const createStudent_1 = require("../../controllers/students/createStudent");
+const getAllStudents_1 = require("../../controllers/students/getAllStudents");
+const getSingleStudent_1 = require("../../controllers/students/getSingleStudent");
+const uploads_1 = require("../../middleware/uploads");
+const router = (0, express_1.Router)();
+router.post('/register', uploads_1.upload.single("student_image"), createStudent_1.createStudent);
+router.get('/all_students', getAllStudents_1.getAllStudents);
+router.get('/single_student/:reg_no', getSingleStudent_1.getSingleStudent);
+exports.default = router;
