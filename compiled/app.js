@@ -32,7 +32,7 @@ app.get('/', async (req, res) => {
     const allStudents = await students_1.default.findAll({});
     const allCourses = await courses_1.default.findAll({});
     return res.status(200).json({
-        message: `All Foods Fetched`,
+        message: `All Data Fetched`,
         Students: allStudents,
         Courses: allCourses
     });

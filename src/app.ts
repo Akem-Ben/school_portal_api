@@ -32,7 +32,7 @@ database.sync({})
     const allStudents = await Students.findAll({})
     const allCourses = await Courses.findAll({})
     return res.status(200).json({
-        message: `All Foods Fetched`,
+        message: `All Data Fetched`,
         Students: allStudents,
         Courses: allCourses
     })
