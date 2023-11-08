@@ -14,7 +14,7 @@ const getSingleStudent = async (req, res) => {
                 message: `Student Found`,
                 data: singleStudents
             });
-        return res.status(400).json({
+        return res.status(404).json({
             message: `Student not found`
         });
     }

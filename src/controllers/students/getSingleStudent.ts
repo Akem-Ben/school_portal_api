@@ -9,7 +9,7 @@ export const getSingleStudent = async(req:Request, res:Response)=>{
             message: `Student Found`,
             data: singleStudents
         })
-        return res.status(400).json({
+        return res.status(404).json({
             message: `Student not found`
         })
     }catch(err:any){
