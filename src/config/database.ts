@@ -17,7 +17,7 @@ export const database = new Sequelize(
     DATABSE_PASSWORD as string,
   {
     host: DATABASE_HOST,
-    port: DATABASE_PORT as unknown as number,
+    // port: DATABASE_PORT as unknown as number,
     dialect: "postgres",
     logging: false,
     dialectOptions: {
